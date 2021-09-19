@@ -4,6 +4,8 @@ print(f"Twinkle, twinkle, little star,\n \t How I wonder what you are!\n \t\tUp 
 
 #2. Write a Python program to get the Python version you are using. Go to the editor
 import builtins
+from posixpath import join
+from random import randint
 import sys
 
 print(sys.version)
@@ -103,16 +105,49 @@ for i in numbers:
     else:
         break
 
+#53. Write a python program to access environment variables
+import os
+print(os.environ["HOME"])
 
+#89. Write a Python program to perform an action if a condition is true. Go to the editor
+#Given a variable name, if the value is 1, display the string "First day of a Month!" and do nothing if the value is not equal.
 
+def check(val):
+    if val==1:
+        print("First day of a Month!")
 
+#44. Write a Python program to locate Python site-packages.
+import site
+s = site.getsitepackages()
 
+#141. Write a python program to convert decimal to hexadecimal.
+hex(255)
 
+#72. Write a Python program to get the details of math module.
+import math
+help(math)
 
+#122. Write a Python program to empty a variable without destroying it.
+n=20
+d = {"x":200}
+print(type(n)())
+print(type(d)())
 
+#Modules
+#Module random
 
+#1. Write a Python program to generate a random color hex, a random alphabetical string, random value between two integers (inclusive) 
+# and a random multiple of 7 between 0 and 70. Use random.randint()
+import random
+r = lambda: random.randint(0,255)
+print('#%02X%02X%02X' % (r(),r(),r()))
+import string
+print(''.join(random.choice(string.ascii_letters) for _ in range(5)))
+print(random.randint(0,255))
+print(random.randint(0, 10) * 7)
 
-
-
+import pydataset
+pydataset.data()
+help(pydatasetq)
 
 
